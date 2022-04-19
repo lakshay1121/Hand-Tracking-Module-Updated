@@ -97,7 +97,7 @@ def main():
     while True:
         success, img = cap.read()
         img = detector.findHands(img)
-        lmList, bbox = detector.findPosition(img)
+        lmList = detector.findPosition(img)
         if len(lmList) != 0:
             print(lmList[4])
 
